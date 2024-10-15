@@ -1,0 +1,126 @@
+.skill-box .title {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 8px;
+  color: #000000;
+}
+
+.skill-box .skill-bar {
+  height: 12px;
+  width: 100%;
+  border-radius: 6px;
+  margin-top: 8px;
+  background: #edecec;
+}
+
+.skill-bar .skill-per {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 90%;
+  border-radius: 6px;
+  background: #fd6f00;
+  animation: progress 0.4s ease-in-out forwards;
+  opacity: 0;
+}
+
+.skill-bar .skill-per .range {
+  position: absolute;
+  background-color: #fd6f00;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  height: 32px;
+  width: 32px;
+  border-radius: 100%;
+}
+
+.skill-bar .skill-per .range::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -21%;
+  background-color: #edecec;
+  height: 70%;
+  width: 70%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+}
+
+@keyframes progress {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.slick-dots {
+  bottom: -64px;
+}
+
+.slick-dots li {
+  height: 16px;
+  border-radius: 8px;
+  width: 57px;
+  margin: 0 8px;
+  overflow: hidden;
+  background-color: #d9d9d9;
+}
+.slick-dots li button {
+  height: 100%;
+  border-radius: 8px;
+  width: 100%;
+}
+.slick-dots li button::before {
+  display: none;
+}
+.slick-dots .slick-active{
+  background: #fd6f00;
+}
+/*  */
+.projects-section {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.projects-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.category {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.category.active {
+  background-color: #ff9800;
+  color: white;
+}
+
+.projects-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.project-card {
+  width: 300px;
+  text-align: center;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
