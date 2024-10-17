@@ -3,7 +3,7 @@ import sliderTwo from "../assets/slider2.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import quote from "../assets/quote.png"
+import quote from "../assets/quote.png";
 const Carosel = () => {
   // slider settings
   const settings = {
@@ -53,27 +53,28 @@ const Carosel = () => {
         {sliderArray.map((item, i) => {
           return (
             <div key={i}>
-              <div className="h-full w-full bg-[#F8F8F8] py-[55px] px-[48px] rounded-[14px] flex gap-x-4 items-center">
+              <div className="h-full w-full bg-[#F8F8F8] py-[55px] px-[48px] rounded-[14px] lg:flex gap-x-[30px] items-center">
                 <div>
                   <img src={item.image} alt="slider" />
                 </div>
-
                 <div>
                   <div className="relative">
                     <p className="mt-[22px] max-w-[921px] text-[21px] font-primary font-normal text-[#000000] mx-auto text-left">
                       {item.comment}
                     </p>
-                    <div className="absolute left-[-2%] top-[-12%]">
+                    <div className="absolute left-[-2%] top-[-12%] lg:hidden md:hidden sm:hidden hidden xl:block 2xl:block">
                       <img src={quote} alt="quote" />
                     </div>
-                    <div className="absolute left-[19%] bottom-[-9%]">
+                    <div className="absolute left-[19%] bottom-[-9%] lg:hidden md:hidden sm:hidden hidden xl:block 2xl:block">
                       <img src={quote} alt="quote" />
                     </div>
                   </div>
                   <h4 className="text-[#000000] font-primary font-medium text-[24px] text-left">
                     {item.name}
                   </h4>
-                  <h5 className="font-primary font-normal text-[#000000] text-[19px] text-left">{item.title}</h5>
+                  <h5 className="font-primary font-normal text-[#000000] text-[19px] text-left">
+                    {item.title}
+                  </h5>
                 </div>
               </div>
             </div>

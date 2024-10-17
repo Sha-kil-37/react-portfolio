@@ -12,7 +12,6 @@ const Tab = () => {
     {
       img: projectImage,
     },
-    
   ];
   //
   const [activeCategory, setActiveCategory] = useState("All");
@@ -41,8 +40,8 @@ const Tab = () => {
       </div>
 
       <div className="projects-gallery mt-[106px]">
-        {filteredProjects.map((project) => (
-          <div className="project-card" key={project.id}>
+        {filteredProjects.map((project, i) => (
+          <div className="project-card" key={i}>
             <img src={project.img} alt="project" />
           </div>
         ))}

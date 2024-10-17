@@ -23,12 +23,12 @@ const Services = () => {
           Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh
           lectus netus in. Aliquet donec morbi convallis pretium
         </p>
-        <div className="mt-6 flex gap-x-6 flex-wrap w-full">
+        <div className="mt-[40px] w-full card-container ">
           {servicesArray.map((item, i) => {
             return (
               <div
                 key={i}
-                className="bg-[#F8F8F8] px-[18px] py-[54px] rounded-[14px] max-w-[330px]"
+                className="bg-[#F8F8F8] px-[18px] py-[54px] rounded-[14px] card text-center sm:text-left"
               >
                 <img src={item.icon} alt="services" />
                 <h3 className="font-primary text-[32px] font-semibold text-[#000000] mt-4">
